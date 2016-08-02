@@ -1,21 +1,99 @@
 <!DOCTYPE html>
 <html>
-<head lang="en">
-    <meta charset="UTF-8">
-    <title>html5</title>
-    <style type="text/css">
-    .theme{
-      display: block;
-      width: 200px;
-      font-size: 30px;
-      margin: 100px auto;
-    }
-    </style>
+<head>
+<meta charset="utf-8">
+<title>选择城市</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+<meta content="yes" name="apple-mobile-web-app-capable">
+<meta content="black" name="apple-mobile-web-app-status-bar-style">
+<meta content="telephone=no" name="format-detection">
+<link rel="stylesheet" href="css/app-common.css" type="text/css" />
 </head>
 <body>
-<div class="theme">
-  Hello, world.
+<div class="wrapper">
+  <div class="pagelocation"><a href="" class="back abs"></a>选择城市</div>
+  <div class="topsearch"><input type="text" placeholder="首字母/拼音/汉字" /></div>
+  <div class="letterlist fix">
+    <a href="#">#</a>
+    <a href="#A">A</a>
+    <a href="#B">B</a>
+    <a href="#C">C</a>
+    <a href="#D">D</a>
+    <a href="#E">E</a>
+    <a href="#F">F</a>
+    <a href="#G">G</a>
+    <a href="#H">H</a>
+    <a href="#J">J</a>
+    <a href="#K">K</a>
+    <a href="#L">L</a>
+    <a href="#M">M</a>
+    <a href="#N">N</a>
+    <a href="#P">P</a>
+    <a href="#Q">Q</a>
+    <a href="#R">R</a>
+    <a href="#S">S</a>
+    <a href="#T">T</a>
+    <a href="#W">W</a>
+    <a href="#X">X</a>
+    <a href="#Y">Y</a>
+    <a href="#Z">Z</a>
+  </div>
+  <div class="content fixtop rel">    
+    <div class="hotcity">
+      <h3 class="title">搜索历史</h3>
+      <div class="citylist">
+        <span class="city">济宁</span>
+        <span class="city">广州</span>
+      </div>      
+      <h3 class="title">热门城市</h3>
+      <div id="hotcity" class="citylist">
+        <script id="hotcity-template" type="text/x-handlebars-template">
+        {{#each this}}
+          <span id="{{id}}" class="city">{{area_name}}</span>
+        {{/each}}
+        </script>       
+      </div>      
+    </div>
+    <div class="citybyletterwrapper">
+      <div class="letterindex" id="A">
+        <h3>A</h3>
+        <ul class="cityul">
+          <li><span>阿克苏</span></li>
+          <li><span>安岳县</span></li>
+          <li><span>阿克苏</span></li>
+          <li><span>安岳县</span></li>
+          <li><span>阿克苏</span></li>
+          <li><span>安岳县</span></li>
+          <li><span>阿克苏</span></li>
+          <li><span>安岳县</span></li>
+          <li><span>阿克苏</span></li>
+          <li><span>安岳县</span></li>
+          <li><span>阿克苏</span></li>
+          <li><span>安岳县</span></li>
+        </ul>
+      </div>
+      <div class="letterindex" id="B">
+        <h3>Ba</h3>
+        <ul class="cityul">
+          <li><span>阿克苏</span></li>
+          <li><span>安岳县</span></li>
+          <li><span>阿克苏</span></li>
+          <li><span>安岳县</span></li>
+          <li><span>阿克苏</span></li>
+          <li><span>安岳县</span></li>
+          <li><span>阿克苏</span></li>
+          <li><span>安岳县</span></li>
+          <li><span>阿克苏</span></li>
+          <li><span>安岳县</span></li>
+          <li><span>阿克苏</span></li>
+          <li><span>安岳县</span></li>
+        </ul>
+      </div>
+    </div>
+  </div>
 </div>
-
+<script src="js/jquery-1.11.1.min.js"></script>
+<script src="js/handlebars.js"></script>
+<script src="js/base.js"></script>
 </body>
 </html>
